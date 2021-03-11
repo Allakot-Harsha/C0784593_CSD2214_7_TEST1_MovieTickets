@@ -22,5 +22,25 @@ body{
     border: 0;
     border-radius: 5px;
     font-size: 14px;
+    margin-left: 10px;
+    padding:5px 15px 5px 15px;
+
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.seat{
+    background-color: grey;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected{
     
 }
