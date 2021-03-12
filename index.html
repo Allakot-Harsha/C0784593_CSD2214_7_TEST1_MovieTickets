@@ -3,7 +3,7 @@
     <head>
         <title>Movie Seat Booking</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    
+        
     </head>
     <body>
         
@@ -11,6 +11,7 @@
         <div class="movie_select">
             <label>Movies Now Showing!</label>
             <select id="movie">
+                <!--movies list that will appear in dropdown-->
                 <option value="15">Parasite - $15</option>
                 <option value="20">Aquaman - $20</option>
                 <option value="10">Inception - $10</option>
@@ -21,8 +22,10 @@
         </div>
         
         <div class="container">
+            <!--showing which side screen comes-->
             <div class="screen"></div>
             <div class="row">
+                <!--10 seats in each row -->
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
@@ -93,6 +96,7 @@
                 <div class="seat occupied"></div>
             </div>
         </div>
+        <!--indicators of seats with their color-->
         <ul class="showcase">
             <li>
                 <div class="seat"></div>
@@ -108,11 +112,12 @@
             </li>
         </ul>
         <p class="text">
+            <!--Prints the no. of seats selected by user and total price-->
             Seats Selected: <span id ="count">0</span> <br>Price: $<span id="price">0</span>
         </p>
         
         <button onclick="document.location='pay.html'">Pay</button>
-        <button onclick="document.location='index.html'">Cancel</button>
+        <button onclick="document.location='index.html'" >Cancel</button>
         </span>
         <script type="text/javascript" src="movie.js"></script>
 </body>
