@@ -36,7 +36,7 @@ const updateSelectedSeatsCount=()=>{
     localStorage.setItem('selectedSeats',JSON.stringify(seatsIndex));
     const selectedSeatsCount=selectedSeats.length;
     count.innerText=selectedSeatsCount;
-    price.innerText=selectedSeatsCount*ticketPrice;
+    price.innerText=selectedSeatsCount*tp;
 };
 container.addEventListener('click',e=>{
     if(
@@ -48,7 +48,7 @@ container.addEventListener('click',e=>{
     }
 });
 movieSelect.addEventListener('change',e=>{
-    ticketPrice=+ e.target.value;
+    tp=+ e.target.value;
     selectedMovie(e.target.selectedIndex,e.target.value);
     updateSelectedSeatsCount();
 });
