@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <head>
-	
+	<!--user is directed to this page once he selects the no. of seats he wishes to book-->
 	<title>Payment</title>
     <style>
+        
     #pay_btn{
         background-color: #464443;
         border: 2px solid: black;
@@ -47,13 +48,14 @@
 				
 				var sub_1 = expiry.substring(0,2);
 				var sub_2 = expiry.substring(2);
-				
+				//validation of name onthe card
 				if(name=="" || !regName.test(name) ){
 					if(name=="")
 						$("#name_error").text("Enter name on card");
 					else
 						$("#name_error").text("Provide both the first name and last name as on the card");
 				}
+                //validation of card no is 16 digit or not
 				
 				else if(card_no=="" || card_no.length!=16 || numeric_card_no==false){
 					$("#name_error").text("");
@@ -67,8 +69,8 @@
 						$("#card_no_error").text("Invalid card number digits");
 					}
 				}
-				
-				else if(expiry=="" || !((sub_1.match(01)||sub_1.match(02)||sub_1.match(03)||sub_1.match(04)||sub_1.match(05)||sub_1.match(06)||sub_1.match(07)||sub_1.match(08)||sub_1.match(09)||sub_1.match(10)||sub_1.match(11)||sub_1.match(12) )&& (sub_2.match(21)||sub_2.match(22)||sub_2.match(23)||sub_2.match(24))) ){
+				//checks the expiry date of the card
+				else if(expiry=="" || !((sub_1.match(01)||sub_1.match(02)||sub_1.match(03)||sub_1.match(04)||sub_1.match(05)||sub_1.match(06)||sub_1.match(07)||sub_1.match(08)||sub_1.match(09)||sub_1.match(10)||sub_1.match(11)||sub_1.match(12) )&& (sub_2.match(25)||sub_2.match(22)||sub_2.match(23)||sub_2.match(24))) ){
 					$("#name_error").text("");
 					$("#card_no_error").text("");
 					
@@ -79,7 +81,7 @@
 						$("#expiry_error").text("Invalid Expiry Date");
 					
 				}
-				
+				//checks the cvv no. is of just 3 digits or not
 				else if(cvv==""||cvv.length!=3||numeric_cvv==false){
 					$("#name_error").text("");
 					$("#card_no_error").text("");
@@ -109,7 +111,7 @@
     <div class="payment" >
         <div id="payment_div">
             <h4>Payment Information</h4><br>
-            <form id="payment_form" action="payment_success.html">
+            <form id="payment_form" action="payment_success.html"><!--on successfull data filling payment_success page is called-->
                 <input id="name_on_card" type="text"  placeholder="Name on Card" ></input>
                 <p id="name_error" ><p>
                 <input id="card_number" type="text" placeholder="Card Number" ></input>
