@@ -14,5 +14,10 @@ const populateUI=()=>{
             }
         });
     }
-    const s
+    const selectedMovieIndex=localStorage.getItem('selectedMovieIndex');
+    const selectedMoviePrice=localStorage.getItem('selectedMoviePrice');
+    if(selectedMovieIndex!=null){
+        
+    }
+
 }
