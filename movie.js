@@ -17,6 +17,10 @@ const populateUI=()=>{
     const selectedMovieIndex=localStorage.getItem('selectedMovieIndex');
     const selectedMoviePrice=localStorage.getItem('selectedMoviePrice');
     if(selectedMovieIndex!=null){
+        movieSelect.selectedIndex=selectedMovieIndex;
+    }
+    if(selectedMoviePrice!=null){
+        count.innerText=selectedSeats.length;
         
     }
 
