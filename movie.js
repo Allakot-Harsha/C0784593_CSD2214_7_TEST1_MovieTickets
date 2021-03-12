@@ -35,5 +35,20 @@ const updateSelectedSeatsCount=()=>{
     const seatsIndex=[...selectedSeats].map(seat =>[...seats].indexOf(seat));
     localStorage.setItem('selectedSeats',JSON.stringify(seatsIndex));
     const selectedSeatsCount=selectedSeats.length;
-    count.innerText=
-}
+    count.innerText=selectedSeatsCount;
+    price.innerText=selectedSeatsCount*ticketPrice;
+};
+container.addEventListener('click',e=>{
+    if(
+        e.target.classList.contains('seat')&&
+        !e.target.classList.contains('occupied')
+    ){
+        e.target.classList.toggle('selected');
+        updateSelectedSeatsCount();
+    }
+});
+movieSelect.addEventListener('change',e=>{
+    ticketPrice=+ e.target.value;
+    selectedMovie(e.target.selectedIndex,e.target.value);
+    updateSelectedSeatsCount();
+});
