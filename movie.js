@@ -27,5 +27,9 @@ const populateUI=()=>{
 };
 populateUI();
 selectedMovie=(movieIndex,moviePrice)=>{
-    
+    localStorage.setItem('selectedMovieIndex',movieIndex);
+    localStorage.setItem('selectedMoviePrice',moviePrice);
+};
+const updateSelectedSeatsCount=()=>{
+    const selectedSeats
 }
