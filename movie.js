@@ -31,5 +31,9 @@ selectedMovie=(movieIndex,moviePrice)=>{
     localStorage.setItem('selectedMoviePrice',moviePrice);
 };
 const updateSelectedSeatsCount=()=>{
-    const selectedSeats
+    const selectedSeats=document.querySelectorAll('.row .selected');
+    const seatsIndex=[...selectedSeats].map(seat =>[...seats].indexOf(seat));
+    localStorage.setItem('selectedSeats',JSON.stringify(seatsIndex));
+    const selectedSeatsCount=selectedSeats.length;
+    count.innerText=
 }
