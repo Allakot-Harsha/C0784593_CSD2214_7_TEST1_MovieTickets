@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
 <head>
 	
 	<title>Payment</title>
+    <style>
+    #pay_btn{
+        background-color: #464443;
+        border: 2px solid: black;
+        border-radius: 4px;
+        color: #fff;
+        display: block;
+        font-family: inherit;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100px;
+    }
+    h4{
+        font-size: 25px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+    background-color:rgb(78, 16, 5);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+    </style>
 </head>
 <body>
 
 
-    <div class="payment"  style="padding-left:25%;">
+    <div class="payment" >
         <div id="payment_div">
             <h4>Payment Information</h4><br>
             <form id="payment_form" action="payment_successful.html">
@@ -19,8 +46,8 @@
                 <input id="expiry" type="text"  placeholder="MMYY" ></input>
                 <p id="expiry_error" ><p>
                 <input id="cvv" type="text" placeholder="CVV" ></input>
-                <p id="cvv_error" ><p><img src="images/visa.jpg"></img>&nbsp;<img src="images/mastercard.jpg"></img>&nbsp;<img src="images/amex.jpg"></img>
-                <input id="pay_btn" type="button" value="Confirm">
+                <p id="cvv_error" ><p><img src="visa.jpg"></img>&nbsp;<img src="mastercard.jpg"></img>
+                <input id="pay_btn" type="button" value="Confirm"  >
             </form>
         </div>			
     </div>
