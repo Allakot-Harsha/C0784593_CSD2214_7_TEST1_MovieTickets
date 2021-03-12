@@ -21,7 +21,11 @@ const populateUI=()=>{
     }
     if(selectedMoviePrice!=null){
         count.innerText=selectedSeats.length;
-        
-    }
+        price.innerText=selectedSeats.length* +selectedMoviePrice;
 
+    }
+};
+populateUI();
+selectedMovie=(movieIndex,moviePrice)=>{
+    
 }
